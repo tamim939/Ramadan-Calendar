@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="bn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>রমজান ক্যালেন্ডার ২০২৬</title>
+    <style>
+      /* ১. ইউনিভার্সাল স্ক্রলবার এবং থাম্ব কিলার */
+      * {
+        box-sizing: border-box;
+        scrollbar-width: none !important; /* Firefox */
+        -ms-overflow-style: none !important; /* IE/Edge */
+      }
+
+      /* Chrome, Safari, এবং মোবাইল ব্রাউজারের সব পার্টস পুরোপুরি ডিলিট */
+      ::-webkit-scrollbar, 
+      ::-webkit-scrollbar-thumb, 
+      ::-webkit-scrollbar-track, 
+      ::-webkit-scrollbar-button, 
+      ::-webkit-scrollbar-corner {
+        display: none !important;
+        width: 0px !important;
+        height: 0px !important;
+        background: transparent !important;
+        opacity: 0 !important;
+      }
+
+      html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        background: #06142e; /* বডির বাইরে কালার ম্যাচ রাখা */
+        overflow-x: hidden;
+        /* স্ক্রল হবে কিন্তু থাম্ব থাকবে না */
+        overflow-y: scroll; 
+        -webkit-overflow-scrolling: touch;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(180deg,#06142e,#0a2a66);
+        background-attachment: fixed;
+        color: #fff;
+        text-align: center;
+        /* কপি এবং জুম বন্ধ */
+        -webkit-user-select: none;
+        user-select: none;
+        touch-action: pan-y;
+      }
+
+      /* Header */
+      .header {
+        padding: 20px;
+        animation: fadeDown 1.5s;
+      }
+      .header h1 {
+        color: #ffd700;
+        font-size: 24px;
+        margin-top: 10px;
+      }
+      .moon {
+        font-size: 50px;
+        animation: floatMoon 3s infinite;
+        display: inline-block;
+      }
+
+      /* Calendar Grid */
+      .calendar {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 8px;
+        padding: 12px;
+        max-width: 100%;
+      }
+
+      .day {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        padding: 10px 2px;
+        animation: zoomIn 0.8s;
+        border: 1px solid rgba(255,255,255,0.05);
+      }
+      .day span {
+        display: block;
+        font-size: 13px;
+        color: #ffd700;
+        font-weight: bold;
+      }
+      .day small {
+        display: block;
+        font-size: 10px;
+        opacity: 0.9;
+        margin-top: 5px;
+      }
+
+      /* Footer */
+      .footer {
+        padding: 25px;
+        font-size: 12px;
+        opacity: 0.8;
+      }
+
+      /* Animations */
+      @keyframes floatMoon {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+      }
+      @keyframes fadeDown {
+        from { opacity: 0; transform: translateY(-20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes zoomIn {
+        from { opacity: 0; transform: scale(0.7); }
+        to { opacity: 1; transform: scale(1); }
+      }
+    </style>
+  </head>
+  <body oncontextmenu="return false;"> 
+
+    <div class="header">
+      <div class="moon">🌙</div>
+      <h1>রমজান ক্যালেন্ডার ২০২৬</h1>
+      <p>সম্ভাব্য তারিখ (চাঁদ দেখার উপর নির্ভরশীল)</p>
+    </div>
+
+    <div class="calendar">
+      <!-- রোজা ১ থেকে ৩০ -->
+      <div class="day"><span>রোজা ১</span><small>১৮ ফেব্রুয়ারি</small></div>
+      <div class="day"><span>রোজা ২</span><small>১৯ ফেব্রুয়ারি</small></div>
+      <div class="day"><span>রোজা ৩</span><small>২০ ফেব্রুয়ারি</small></div>
+      <div class="day"><span>রোজা ৪</span><small>২১ ফেব্রুয়ারি</small></div>
+      <div class="day"><span>রোজা ৫</span><small>২২ ফেব্রুয়ারি</small></div>
+      <div class="day"><span>রোজা ৬</span><small>২৩ ফেব্রুয়ারি</small></div>
+      <div class="day"><span>রোজা ৭</span><small>২৪ ফেব্রুয়ারি</small></div>
+      <div class="day"><span>রোজা ৮</span><small>২৫ ফেব্রুয়ারি</small></div>
+      <div class="day"><span>রোজা ৯</span><small>২৬ ফেব্রুয়ারি</small></div>
+      <div class="day"><span>রোজা ১০</span><small>২৭ ফেব্রুয়ারি</small></div>
+      <div class="day"><span>রোজা ১১</span><small>২৮ ফেব্রুয়ারি</small></div>
+      <div class="day"><span>রোজা ১২</span><small>১ মার্চ</small></div>
+      <div class="day"><span>রোজা ১৩</span><small>২ মার্চ</small></div>
+      <div class="day"><span>রোজা ১৪</span><small>৩ মার্চ</small></div>
+      <div class="day"><span>রোজা ১৫</span><small>৪ মার্চ</small></div>
+      <div class="day"><span>রোজা ১৬</span><small>৫ মার্চ</small></div>
+      <div class="day"><span>রোজা ১৭</span><small>৬ মার্চ</small></div>
+      <div class="day"><span>রোজা ১৮</span><small>৭ মার্চ</small></div>
+      <div class="day"><span>রোজা ১৯</span><small>৮ মার্চ</small></div>
+      <div class="day"><span>রোজা ২০</span><small>৯ মার্চ</small></div>
+      <div class="day"><span>রোজা ২১</span><small>১০ মার্চ</small></div>
+      <div class="day"><span>রোজা ২২</span><small>১১ মার্চ</small></div>
+      <div class="day"><span>রোজা ২৩</span><small>১২ মার্চ</small></div>
+      <div class="day"><span>রোজা ২৪</span><small>১৩ মার্চ</small></div>
+      <div class="day"><span>রোজা ২৫</span><small>১৪ মার্চ</small></div>
+      <div class="day"><span>রোজা ২৬</span><small>১৫ মার্চ</small></div>
+      <div class="day"><span>রোজা ২৭</span><small>১৬ মার্চ</small></div>
+      <div class="day"><span>রোজা ২৮</span><small>১৭ মার্চ</small></div>
+      <div class="day"><span>রোজা ২৯</span><small>১৮ মার্চ</small></div>
+      <div class="day"><span>রোজা ৩০</span><small>১৯ মার্চ</small></div>
+    </div>
+
+    <div class="footer">
+      <strong style="color: #ffd700;">🌙 ঈদুল ফিতর সম্ভাব্য: ২০ মার্চ ২০২৬</strong>
+      <br /><br />
+      © Tamim Hasan
+    </div>
+
+    <script>
+      // কপি এবং রাইট ক্লিক বন্ধ
+      document.onkeydown = function(e) {
+        if (e.ctrlKey && (e.keyCode === 67 || e.keyCode === 85 || e.keyCode === 73 || e.keyCode === 83)) {
+          return false;
+        }
+      };
+
+      // মোবাইল জুম পুরোপুরি ডিসেবল করা
+      document.addEventListener('touchstart', function (event) {
+        if (event.touches.length > 1) {
+          event.preventDefault();
+        }
+      }, { passive: false });
+
+      let lastTouchEnd = 0;
+      document.addEventListener('touchend', function (event) {
+        let now = (new Date()).getTime();
+        if (now - lastTouchEnd <= 300) {
+          event.preventDefault();
+        }
+        lastTouchEnd = now;
+      }, false);
+    </script>
+  </body>
+</html>
